@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines":{"node":"18.x"},
+  "engines": {
+    "node": "18.x"
+  },
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
@@ -13,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.6.1",
     "express": "^4.18.3",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0 ",
