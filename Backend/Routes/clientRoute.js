@@ -20,7 +20,7 @@ router.post('/',async(req,res)=>{
     }
 
     const pw = userExist.password; // pw= password from dataBase
-    if (pw === password) {
+    if (pw == password) {
      // console.log("adsadsa    ")
       const token = generateToken(email, password);
       res.status(200).json({ message: "success token generated", token: token, location:  userExist.location });

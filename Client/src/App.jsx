@@ -11,7 +11,7 @@ function App() {
   const TOKEN = localStorage.getItem("Token");
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       {!TOKEN && (<>
           <Navbar log={"Login"} />
           <Routes>

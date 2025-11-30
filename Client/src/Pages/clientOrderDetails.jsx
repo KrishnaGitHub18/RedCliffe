@@ -35,30 +35,35 @@ const ClientOrderDetails = () => {
   };
 
   return (
-    <div className="w-[95vw] mb-[5vh] flex justify-between">
-      <div className="flex h-[75vh] w-[50vw] justify-center items-center">
-        <div className="flex flex-col gap-[25px] items-center justify-center border border-gray-700 rounded-lg p-8 w-[30vw] h-[40vh]  bg-sky-200">
-          <h1 className="text-center text-[30px] font-[500]">
-            Place Order:
-          </h1>
-          <span className="text-center text-[20px] font-[500]">Enter the Quantity of {id2}</span>
-          <input
-            className="border-2 w-[20vw] border-black p-[5px]"
-            type="text"
-            value={order}
-            placeholder="Enter the quantity"
-            onChange={handleChange}
-          ></input>
-          <button
-            className="mt-4 w-[15vw] bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={submit}
-          >
-            Submit
-          </button>
+    <div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex-1 flex justify-center items-center min-h-[400px]">
+          <div className="flex flex-col gap-6 items-center justify-center border-2 border-gray-300 rounded-xl p-8 w-full max-w-md bg-gradient-to-br from-sky-100 to-blue-100 shadow-lg">
+            <h1 className="text-center text-3xl font-semibold text-gray-800">
+              Place Order
+            </h1>
+            <span className="text-center text-lg font-medium text-gray-700">
+              Enter the Quantity of <span className="font-bold text-blue-600">{id2}</span>
+            </span>
+            <input
+              className="border-2 border-gray-400 w-full max-w-xs p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center text-lg"
+              type="number"
+              min="1"
+              value={order}
+              placeholder="Enter the quantity"
+              onChange={handleChange}
+            />
+            <button
+              className="mt-2 w-full max-w-xs bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+              onClick={submit}
+            >
+              Submit Order
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="mt-[0px] w-[40vw] h-[40vh] pt-[5vh] pr-[5vw]">
-        <img src={bg} className="w-full" alt="Background" />
+        <div className="flex-1 flex justify-center items-center">
+          <img src={bg} className="w-full max-w-lg h-auto object-contain" alt="Order illustration" />
+        </div>
       </div>
     </div>
   );
