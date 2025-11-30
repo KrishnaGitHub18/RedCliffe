@@ -10,7 +10,7 @@ function ClientOrder() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/reagent", {
+      .get("http://localhost:3000/clientOrder", {
         headers: {
           token: localStorage.getItem("Token"),
         },
@@ -47,9 +47,9 @@ function ClientOrder() {
                 key={index}
                 className="grid grid-cols-4 gap-4 border-t border-gray-200 hover:bg-blue-50 transition-colors duration-200 p-4"
               >
-                <div className="py-2 font-medium text-gray-800">{it.name}</div>
-                <div className="py-2 text-gray-600">{it.class.join(", ")}</div>
-                <div className="py-2 text-gray-700 font-semibold">{it.stock}</div>
+                <div className="py-2 font-medium text-gray-800">{it.reagent}</div>
+                <div className="py-2 text-gray-600">{it.class && it.class.length > 0 ? it.class.join(", ") : "N/A"}</div>
+                <div className="py-2 text-gray-700 font-semibold">{it.quantity}</div>
                 <div className="py-2">
                   <button
                     className="bg-green-500 hover:bg-green-600 text-white font-medium rounded-md px-4 py-2 transition-colors duration-200 shadow-sm"

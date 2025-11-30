@@ -6,7 +6,7 @@ const ShippingDetails = () => {
     const [placed, setPlaced] = useState("Not Delivered");
 
     useEffect(() => {
-        axios.get('http://localhost:3000/clientorderDeatils')
+        axios.get('http://localhost:3000/clientOrderDetails')
             .then((res) => {
                 setData(res.data);
             })
@@ -18,7 +18,7 @@ const ShippingDetails = () => {
     const handleUpdate = async (order) => {
         try {
             const Data = { ...order, Status: "Delivered" };
-            const res = await axios.put(`http://localhost:3000/clientorderDeatils/${order._id}`, Data);
+            const res = await axios.put(`http://localhost:3000/clientOrderDetails/${order._id}`, Data);
             if (res) {
                 alert("Order Placed!");
                 setPlaced("Delivered");
