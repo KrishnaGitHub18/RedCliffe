@@ -37,7 +37,7 @@ const ShippingDetails = () => {
                     <div className="px-2">Name</div>
                     <div className="px-2">Location</div>
                     <div className="px-2">Quantity</div>
-                    <div className="px-2">Status</div>
+                    <div className="px-2">Status </div>
                 </div>
                 {data.map((order, index) => (
                     <div key={index} className="grid grid-cols-4 gap-4 border-t border-gray-200 hover:bg-blue-50 transition-colors duration-200 p-4">
