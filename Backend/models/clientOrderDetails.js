@@ -19,7 +19,7 @@ export const orderDetail = mongoose.model('orderDetail', clientOrderDetails);
 
 
 // const newAdmin = new Client({
-//   email: "ayush@gmail.com",
+//   email: "kd@gmail.com",
 //   password: "12345678",
 //   location :"Banaras"
 // });

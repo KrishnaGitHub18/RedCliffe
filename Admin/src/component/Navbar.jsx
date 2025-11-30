@@ -30,7 +30,7 @@ const Navbar = ({log}) => {
   return (
     <nav className="flex items-center justify-between bg-blue-600 shadow-md p-4 md:p-6">
         <div className="text-white text-xl md:text-2xl font-bold cursor-pointer" onClick={handleClickToHome}>
-          RedCliffe
+          Lab Admin
         </div>
         <div className="flex-grow"></div>
         <div className="flex items-center gap-4 md:gap-6 text-white">

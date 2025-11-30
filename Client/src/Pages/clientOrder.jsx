@@ -10,13 +10,13 @@ function ClientOrder() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5173/clientOrder", {
+      .get("http://localhost:3000/reagent", {
         headers: {
           token: localStorage.getItem("Token"),
         },
       })
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setData(res.data);
       })
       .catch((err) => {
@@ -25,6 +25,7 @@ function ClientOrder() {
   }, []);
 
   const newar = data.filter((prev) => prev.location === id);
+  console.log(data);
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl">
@@ -38,15 +39,17 @@ function ClientOrder() {
         </div>
         {newar && newar.length > 0 ? (
           newar.map((reagent) => {
+            console.log(reagent)
             const arr = reagent.stock;
+            console.log(reagent);
             return arr.map((it, index) => (
               <div
                 key={index}
                 className="grid grid-cols-4 gap-4 border-t border-gray-200 hover:bg-blue-50 transition-colors duration-200 p-4"
               >
-                <div className="py-2 font-medium text-gray-800">{it.reagent}</div>
+                <div className="py-2 font-medium text-gray-800">{it.name}</div>
                 <div className="py-2 text-gray-600">{it.class.join(", ")}</div>
-                <div className="py-2 text-gray-700 font-semibold">{it.quantity}</div>
+                <div className="py-2 text-gray-700 font-semibold">{it.stock}</div>
                 <div className="py-2">
                   <button
                     className="bg-green-500 hover:bg-green-600 text-white font-medium rounded-md px-4 py-2 transition-colors duration-200 shadow-sm"

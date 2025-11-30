@@ -5,7 +5,7 @@ const AdminOrderDetails = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/clientorderDeatils')
+    axios.get('http://localhost:3000/clientorderDetails')
       .then((res) => {
         setData(res.data);
       })
