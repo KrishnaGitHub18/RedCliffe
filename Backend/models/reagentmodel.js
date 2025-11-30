@@ -17,6 +17,5 @@ const reagentSchema = new mongoose.Schema({
     type : String ,
     required:true 
   }
-
 });
 export  const Reagent = mongoose.model('Reagent', reagentSchema);

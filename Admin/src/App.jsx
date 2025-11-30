@@ -5,6 +5,7 @@ import Data from "./Pages/Data";
 import AdminOrderDetails from "./Pages/adminOrderDetails";
 import Home from "./Pages/Home";
 import Navbar from "./component/Navbar";
+import TableComponent from "./Pages/Data";
 
 function App() {
   const TOKEN = localStorage.getItem("Token");
@@ -26,7 +27,7 @@ function App() {
           <Routes>
             <Route path="*" element={<Home />} />
             <Route path="/login" element={<AdminLogin />} />
-            <Route path="/data" element={<Data />} /> 
+            <Route path="/data" element={<TableComponent />} /> 
             <Route path="/order-data" element={< AdminOrderDetails/>} />
           </Routes>
         </>

@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
+  // console.log("hii");
   try {
     const reagents = await ClientOrder.find(); 
     res.status(200).json(reagents); 

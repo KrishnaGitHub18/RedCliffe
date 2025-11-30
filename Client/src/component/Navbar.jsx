@@ -30,20 +30,34 @@ const Navbar = ({log}) => {
   }
 
   return (
-    <nav className="flex items-center justify-between bg-blue-500 p-6">
-        <div className="text-white text-lg font-bold">RedCliffe</div>
+    <nav className="flex items-center justify-between bg-blue-600 shadow-md p-4 md:p-6">
+        <div className="text-white text-xl md:text-2xl font-bold cursor-pointer" onClick={handleClickToHome}>
+          RedCliffe
+        </div>
         <div className="flex-grow"></div>
-        <div className="text-white text-lg font-bold">
-          <div onClick={handleClickToHome} className="cursor-pointer inline-block mr-4 hover:text-gray-200">
+        <div className="flex items-center gap-4 md:gap-6 text-white">
+          <div 
+            onClick={handleClickToHome} 
+            className="cursor-pointer text-sm md:text-base font-medium hover:text-blue-200 transition-colors duration-200"
+          >
             Home
           </div>
-          <div onClick={handleClickToOrder} className="cursor-pointer inline-block mr-4 hover:text-gray-200">
+          <div 
+            onClick={handleClickToOrder} 
+            className="cursor-pointer text-sm md:text-base font-medium hover:text-blue-200 transition-colors duration-200"
+          >
             Order
           </div>
-          <div onClick={handleClickToMyOrder} className="cursor-pointer inline-block mr-4 hover:text-gray-200">
-            MyOrder
+          <div 
+            onClick={handleClickToMyOrder} 
+            className="cursor-pointer text-sm md:text-base font-medium hover:text-blue-200 transition-colors duration-200"
+          >
+            My Orders
           </div>
-          <div onClick={()=>handleLog(log)} className="cursor-pointer inline-block hover:text-gray-200">
+          <div 
+            onClick={()=>handleLog(log)} 
+            className="cursor-pointer text-sm md:text-base font-medium bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-lg transition-colors duration-200"
+          >
             {log}
           </div>
         </div>
