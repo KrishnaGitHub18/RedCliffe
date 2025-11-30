@@ -14,7 +14,7 @@ const ClientOrderDetails = () => {
 
   const submit = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/clientOrderDeatils", {
+      const res = await axios.post("http://localhost:3000/clientOrderDetails", {
         units: order,
         name: id2,
         location: id,
